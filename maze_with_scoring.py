@@ -31,6 +31,7 @@ PURPLE = (164, 66, 244)
 BRIGHT_GREEN = (29, 140, 12)
 ORANGE = (255, 125 , 0)
 
+
 # Make a player
 player1 =  [200, 150, 25, 25]
 vel1 = [0, 0]
@@ -48,17 +49,23 @@ wall2 = [400, 450, 200, 25]
 wall3 = [100, 100, 25, 200]
 wall4 = [0, 0, 400, 25]
 wall5 = [450, 0, 400, 25]
-wall6 = [
+wall6 = [775, 20, 25, 300]
+wall7 = [775, 375, 25, 250]
+wall8 = [0, 0, 25, 300]
+wall9 = [0, 375, 25, 250]
+wall10 = 
 
-walls = [wall1, wall2, wall3, wall4, wall5]
+
+walls = [wall1, wall2, wall3, wall4, wall5, wall6, wall7, wall8, wall9]
 
 # Make coins
 coin1 = [300, 500, 25, 25]
 coin2 = [400, 200, 25, 25]
 coin3 = [150, 150, 25, 25]
 coin4 = [500, 100, 25, 25]
+coin5 = [200, 400, 25, 25]
 
-coins = [coin1, coin2, coin3, coin4]
+coins = [coin1, coin2, coin3, coin4, coin5]
 
 # Sound Effects
 
@@ -218,11 +225,11 @@ while not done:
     if win:
         if score1 > score2:
             font = pygame.font.Font(None, 50)
-            score_text = font.render("P1 Wins!!!", 1, BRIGHT_BLUE)
-            screen.blit(score_text, [350, 50])
+            score_text = font.render("Player 1 Wins!!!", 1, BRIGHT_BLUE)
+            screen.blit(score_text, [300, 50])
         elif score1 < score2:
             font = pygame.font.Font(None, 50)
-            score_text = font.render("P2 Wins!!!", 1, BRIGHT_BLUE)
+            score_text = font.render("Player 2 Wins!!!", 1, BRIGHT_BLUE)
             screen.blit(score_text, [350, 50])
         elif score1 == score2:
             font = pygame.font.Font(None, 50)
@@ -231,11 +238,11 @@ while not done:
 
        
     font = pygame.font.Font(None, 30)
-    score_text = font.render("P1 Score: " + str(score1), 1, PINK)
+    score_text = font.render("Player 1 Score: " + str(score1), 1, PINK)
     screen.blit(score_text, [100, 50])
 
     font = pygame.font.Font(None, 30)
-    score_text = font.render("P2 Score: " + str(score2), 1, PURPLE)
+    score_text = font.render("Player 2 Score: " + str(score2), 1, PURPLE)
     screen.blit(score_text, [600, 50])
     
     # Update screen (Actually draw the picture in the window.)
